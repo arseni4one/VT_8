@@ -1,4 +1,4 @@
-﻿@page "{id:int}"
+﻿@page
 @model VT_Lab1.Areas.Admin.Pages.DeleteModel
 
 @{
@@ -43,7 +43,7 @@
             @Html.DisplayFor(model => model.Tile.Group.TileGroupId)
         </dd>
     </dl>
-
+    
     <form method="post">
         <input type="hidden" asp-for="Tile.TileId" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |

@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VT_Lab1", "VT_Lab1\VT_Lab1.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VT_Lab1.DAL", "VT_Lab1.DAL\VT_Lab1.DAL.csproj", "{55C848E4-CF22-4959-8AA3-E44AF3D78E69}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VT_Lab1.Tests", "VT_Lab1.Tests\VT_Lab1.Tests.csproj", "{086CC666-731A-493C-866F-1DE25C7DDFA9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VT_Lab1.Tests", "VT_Lab1.Tests\VT_Lab1.Tests.csproj", "{086CC666-731A-493C-866F-1DE25C7DDFA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using VT_Lab1.DAL.Data;
 using VT_Lab1.DAL.Entities;
 using VT_Lab1.Models;
- 
+
 
 
 namespace VT_Lab1.Controllers
@@ -47,10 +47,10 @@ namespace VT_Lab1.Controllers
         }
         public void InitData()
         { }
-            /// <summary>
-            /// Инициализация списков
-            /// </summary>
-            private void SetupData()
+        /// <summary>
+        /// Инициализация списков
+        /// </summary>
+        private void SetupData()
         {
             /* _tileGroups = new List<TileGroup>
                   {

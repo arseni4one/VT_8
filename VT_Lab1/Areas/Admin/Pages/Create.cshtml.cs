@@ -28,7 +28,7 @@ namespace VT_Lab1.Areas.Admin.Pages
 
         public IActionResult OnGet()
         {
-        ViewData["TileGroupId"] = new SelectList(_context.TileGroups, "TileGroupId", "TileGroupId");
+            ViewData["TileGroupId"] = new SelectList(_context.TileGroups, "TileGroupId", "TileGroupId");
             return Page();
         }
 

@@ -19,7 +19,7 @@ namespace VT_Lab1.Areas.Admin.Pages
             _context = context;
         }
 
-        public IList<Tile> Tile { get;set; }
+        public IList<Tile> Tile { get; set; }
 
         public async Task OnGetAsync()
         {

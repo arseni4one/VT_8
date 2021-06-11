@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Razor.TagHelpers;
+﻿using Microsoft.AspNetCore.Razor.TagHelpers;
 using Microsoft.AspNetCore.Routing;
+
 
 namespace VT_Lab1.TagHelpers
 {
-    [HtmlTargetElement(tag: "img", Attributes = "img-action, imgcontroller")]
+    [HtmlTargetElement(tag: "img", Attributes = "img-action, img-controller")]
 
     public class ImageTagHelper:TagHelper
     {
@@ -25,6 +22,5 @@ namespace VT_Lab1.TagHelpers
            ImgController);
             output.Attributes.Add("src", uri);
         }
-
     }
 }

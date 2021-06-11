@@ -1,7 +1,6 @@
 //using Fluent.Infrastructure.FluentModel;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
@@ -17,7 +16,6 @@ using System.Threading.Tasks;
 
 using VT_Lab1.DAL.Data;
 using VT_Lab1.DAL.Entities;
-using VT_Lab1.Models;
 using VT_Lab1.Services;
 
 namespace VT_Lab1
@@ -34,7 +32,8 @@ namespace VT_Lab1
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<ApplicationDbContext>(options =>
+ options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddIdentity<ApplicationUser, IdentityRole>(opt =>
             {
                 opt.Password.RequireLowercase = false;
@@ -45,21 +44,18 @@ namespace VT_Lab1
             //.AddDefaultUI(UIFramework.Bootstrap4)
             .AddEntityFrameworkStores <ApplicationDbContext>()
             .AddDefaultTokenProviders();
-            services.AddDatabaseDeveloperPageExceptionFilter();
-
-            services.AddControllersWithViews();
-
-
+            
             services.AddRazorPages();
-
             services.AddDistributedMemoryCache();
-            services.AddSession(opt => { opt.Cookie.HttpOnly = true; opt.Cookie.IsEssential = true; });
+            services.AddSession(opt =>
+            {
+                opt.Cookie.HttpOnly = true;
+                opt.Cookie.IsEssential = true;
+            });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-
+            //services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             //services.AddScoped<Cart>(sp => CartService.GetCart(sp));
-
             services.ConfigureApplicationCookie(opt =>
             {
                 opt.LoginPath = $"/Identity/Account/Login";

@@ -35,37 +35,38 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Tile) {
-        <tr>
-            <td>
-                <img src="~/Images/@item.Image" alt="NoImage" width="50" />
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TileName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Size)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Image)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Group.TileGroupId)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.TileId"
-                   class="btn btn-outline-info">
-                    <span class="fas fa-edit"></span>
-                </a>
-                <a asp-page="./Delete" asp-route-id="@item.TileId"
-                   class="btn btn-outline-danger">
-                    <span class="fas fa-trash-alt"></span>
-                </a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.Tile)
+        {
+            <tr>
+                <td>
+                    <img src="~/Images/@item.Image" alt="NoImage" width="50" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TileName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Size)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Image)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Group.TileGroupId)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.TileId"
+                       class="btn btn-outline-info">
+                        <span class="fas fa-edit"></span>
+                    </a>
+                    <a asp-page="./Delete" asp-route-id="@item.TileId"
+                       class="btn btn-outline-danger">
+                        <span class="fas fa-trash-alt"></span>
+                    </a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

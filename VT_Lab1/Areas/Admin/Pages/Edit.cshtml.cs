@@ -19,7 +19,7 @@ namespace VT_Lab1.Areas.Admin.Pages
         private readonly VT_Lab1.DAL.Data.ApplicationDbContext _context;
         private IWebHostEnvironment _environment;
 
-        public EditModel(ApplicationDbContext context,IWebHostEnvironment env)
+        public EditModel(ApplicationDbContext context, IWebHostEnvironment env)
         {
             _context = context;
             _environment = env;
@@ -45,7 +45,7 @@ namespace VT_Lab1.Areas.Admin.Pages
             {
                 return NotFound();
             }
-           ViewData["TileGroupId"] = new SelectList(_context.TileGroups, "TileGroupId", "TileGroupId");
+            ViewData["TileGroupId"] = new SelectList(_context.TileGroups, "TileGroupId", "TileGroupId");
             return Page();
         }
 

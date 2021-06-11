@@ -3,28 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using VT_Lab1.DAL.Data;
 using VT_Lab1.DAL.Entities;
 
 namespace VT_Lab1.Tests
 {
     public class TestData
     {
-        public static void FillContext(ApplicationDbContext context)
-        {
-            context.TileGroups.Add(new TileGroup
-            { GroupName = "fake group" });
-            context.AddRange(new List<Tile>
-             {
-             new Tile{ TileId=1, TileGroupId=1},
-             new Tile{ TileId=2, TileGroupId=1},
-             new Tile{ TileId=3, TileGroupId=2},
-             new Tile{ TileId=4, TileGroupId=2},
-             new Tile{ TileId=5, TileGroupId=3}
-             });
-            context.SaveChanges();
-        }
-
         public static List<Tile> GetTilesList()
         {
             return new List<Tile>

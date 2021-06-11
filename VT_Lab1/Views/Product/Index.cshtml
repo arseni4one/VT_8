@@ -2,7 +2,8 @@
 @model ListViewModel<Tile>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Каталог";
+    Layout = "~/Views/Shared/_Layout.cshtml";
     var categories = ViewData["Groups"] as IEnumerable<TileGroup>;
     int currentGroup = (int)ViewData["CurrentGroup"];
 
@@ -43,25 +44,17 @@
     </div>
     <div class="col-10">
         <div class="card-group" id="list">
-           
             <partial name="_ListPartial" model="@Model" />
-
-
-            
         </div>
-        @*<div class="card-deck">
-            @foreach (var item in Model)
-            {
-                <partial name="_ListItemPartial" model="@item" />
 
-            }
-        </div>
+
+    </div>
+    <div class="form-row text-center">
         <pager page-current="@Model.CurrentPage"
                page-total="@Model.TotalPages"
                action="Index"
                controller="Product"
                group-id="@currentGroup"></pager>
-        *@
     </div>
 
     @*<h1>Index</h1>
@@ -125,4 +118,4 @@
             </tbody>
         </table>
     *@
-    </div>
+</div>
